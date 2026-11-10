@@ -1,1 +1,50 @@
-# -Quiz-game
+
+questions = [
+    {
+        "question": "1. What is the capital of India?",
+        "options": ["A. Mumbai", "B. Delhi", "C. Bangalore", "D. Chennai"],
+        "answer": "B"
+    },
+    {
+        "question": "2. Which language is used for AI?",
+        "options": ["A. Python", "B. HTML", "C. CSS", "D. SQL"],
+        "answer": "A"
+    },
+    {
+        "question": "3. What is 10 + 20?",
+        "options": ["A. 20", "B. 40", "C. 30", "D. 50"],
+        "answer": "C"
+    },
+    {
+        "question": "4. Who developed Python?",
+        "options": ["A. James Gosling", "B. Guido van Rossum", "C. Dennis Ritchie", "D. Elon Musk"],
+        "answer": "B"
+    }
+]
+
+score = 0
+
+print("===== WELCOME TO QUIZ GAME =====")
+
+for q in questions:
+    print("\n" + q["question"])
+
+    for option in q["options"]:
+        print(option)
+
+    answer = input("Enter your answer (A/B/C/D): ").upper()
+
+    if answer == q["answer"]:
+        print("Correct Answer!")
+        score += 1
+    else:
+        print("Wrong Answer!")
+
+print("\n===== QUIZ COMPLETED =====")
+print("Your Score:", score, "/", len(questions))
+
+if score >= 3:
+    print("Excellent Performance!")
+else:
+    print("Keep Practicing!")
+    
